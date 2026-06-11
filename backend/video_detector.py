@@ -2,7 +2,9 @@ import cv2
 from ultralytics import YOLO
 
 # 1. Load the model once
-model = YOLO("yolov8n.pt")
+from config import *
+
+model = YOLO(MODEL_PATH)
 
 video_path = "datasets/videos/railway_station.mp4"
 cap = cv2.VideoCapture(video_path)
@@ -34,10 +36,10 @@ while True:
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
     # 3. Crowd Alert Logic (Evaluated every frame based on final person_count)
-    if person_count < 50:
+    if person_count < SAFE_THRESHOLD:
         status = "STATUS: SAFE"
         status_color = (0, 255, 0)      # Green BGR
-    elif person_count < 100:
+    elif person_count < WARNING_THRESHOLD:
         status = "STATUS: WARNING"
         status_color = (0, 165, 255)    # Orange BGR
     else:
