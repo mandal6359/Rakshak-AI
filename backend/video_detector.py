@@ -6,7 +6,7 @@ from config import *
 
 model = YOLO(MODEL_PATH)
 
-video_path = "datasets/videos/railway_station.mp4"
+video_path = "datasets/videos/track_intrusion_1.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Check if video opened successfully

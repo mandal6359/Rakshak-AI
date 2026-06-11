@@ -5,7 +5,7 @@ from ultralytics import YOLO
 model = YOLO("models/yolov8n.pt")
 
 # 2. Open the video file
-video_path = "datasets/videos/railway_station.mp4"
+video_path = "datasets/videos/track_intrusion_1.mp4"
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
