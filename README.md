@@ -136,8 +136,27 @@ The system converts raw CCTV footage into actionable intelligence.
 │  Control Room Operators                                 │
 └──────────────────────────────────────────────────────────┘
 
+# Project Workflow
 
-
+CCTV Camera
+      ↓
+RTSP Stream
+      ↓
+YOLOv8 Detection
+      ↓
+Crowd / Intrusion Analysis
+      ↓
+Threat Severity Engine
+      ↓
+Alert Generation
+      ↓
+Database Logging
+      ↓
+Heatmap Analytics
+      ↓
+Command Center Dashboard
+      ↓
+Security Team Response
 
 ---
 
@@ -478,3 +497,4 @@ B.Tech Computer Science (AI & ML)
 Rakshak AI – Smart Railway Safety Command Center
 
 "Protecting Passengers Through Intelligent Surveillance" -->
+
